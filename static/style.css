@@ -3,13 +3,23 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    background-color: #007BFF;
+    background-color: #00509E;
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+.logo {
+    max-width: 200px; /* Regola la dimensione del logo */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centra il logo orizzontalmente */
 }
 
 nav ul {
@@ -25,6 +35,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
 section {
@@ -32,14 +43,15 @@ section {
     margin: 20px;
     background-color: white;
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
 }
 
 footer {
-    background-color: #007BFF;
+    background-color: #00509E;
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    margin-top: auto;
 }
