@@ -9,6 +9,7 @@
 body {
     line-height: 1.6;
     color: #333;
+    overflow-x: hidden; /* Previene lo scroll orizzontale */
 }
 
 .container {
@@ -51,12 +52,14 @@ h4 {
 
 .btn:hover {
     background-color: #5A0911; /* Rosso rubino più scuro */
+    transform: translateY(-2px);
 }
 
 .btn-outline {
     border: 2px solid #7D0D18;
     color: #7D0D18;
     background: transparent;
+    padding: 10px 23px;
 }
 
 .btn-outline:hover {
@@ -99,6 +102,9 @@ h4 {
 .main-nav {
     padding: 20px 0;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: relative;
+    background: white;
+    z-index: 1000;
 }
 
 .main-nav .container {
@@ -109,6 +115,7 @@ h4 {
 
 .logo img {
     height: 60px;
+    max-width: 100%;
 }
 
 .nav-links {
@@ -125,16 +132,38 @@ h4 {
     color: #333;
     font-weight: 600;
     transition: color 0.3s ease;
+    position: relative;
 }
 
 .nav-links a:hover {
     color: #7D0D18; /* Rosso rubino */
 }
 
+.nav-links a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #7D0D18;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover:after {
+    width: 100%;
+}
+
 .mobile-menu {
     display: none;
     font-size: 24px;
     cursor: pointer;
+    color: #7D0D18;
+    transition: transform 0.3s;
+}
+
+.mobile-menu:hover {
+    transform: scale(1.1);
 }
 
 /* Hero Section */
@@ -147,30 +176,47 @@ h4 {
     align-items: center;
     color: white;
     text-align: center;
+    position: relative;
 }
 
 .hero-content {
     width: 100%;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
-    color: white; /* Mantenuto bianco per contrasto sull'hero */
+    color: white;
     margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
 .hero p {
     font-size: 20px;
     margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 /* Services Section */
 .services {
     padding: 80px 0;
     text-align: center;
+    background: white;
 }
 
 .services h2 {
     margin-bottom: 50px;
+    position: relative;
+}
+
+.services h2:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #7D0D18;
+    margin: 15px auto 0;
 }
 
 .services-grid {
@@ -180,19 +226,21 @@ h4 {
 }
 
 .service-card {
-    padding: 30px;
+    padding: 40px 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    background: white;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
 .service-card i {
     font-size: 50px;
-    color: #7D0D18; /* Rosso rubino */
+    color: #7D0D18;
     margin-bottom: 20px;
 }
 
@@ -215,6 +263,16 @@ h4 {
 
 .about h2 {
     margin-bottom: 20px;
+    position: relative;
+}
+
+.about h2:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #7D0D18;
+    margin-top: 15px;
 }
 
 .about p {
@@ -227,13 +285,19 @@ h4 {
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.about-image img:hover {
+    transform: scale(1.02);
 }
 
 /* Appointment Section */
 .appointment-section {
     padding: 80px 0;
-    background-color: #f9f9f9;
+    background-color: #7D0D18;
     text-align: center;
+    color: white;
 }
 
 .appointment-content {
@@ -242,32 +306,33 @@ h4 {
 }
 
 .appointment-section h2 {
+    color: white;
     margin-bottom: 20px;
 }
 
 .appointment-section p {
     font-size: 18px;
     margin-bottom: 30px;
-    color: #666;
+    color: rgba(255,255,255,0.9);
 }
 
 .btn-ruby {
     display: inline-block;
-    background-color: #7D0D18; /* Rosso rubino */
-    color: white;
+    background-color: white;
+    color: #7D0D18;
     padding: 15px 35px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(125, 13, 24, 0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .btn-ruby:hover {
-    background-color: #5A0911; /* Rosso rubino più scuro */
+    background-color: #f0f0f0;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(125, 13, 24, 0.4);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 /* Footer */
@@ -285,16 +350,19 @@ h4 {
 }
 
 .footer-column h4 {
-    color: #7D0D18; /* Rosso rubino */
+    color: #7D0D18;
     margin-bottom: 20px;
+    font-size: 22px;
 }
 
 .footer-column p {
     margin-bottom: 10px;
+    opacity: 0.8;
 }
 
 .footer-column i {
     margin-right: 10px;
+    color: #7D0D18;
 }
 
 .footer-bottom {
@@ -310,28 +378,65 @@ h4 {
     color: white;
     margin-left: 20px;
     text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s;
 }
 
 .footer-links a:hover {
-    color: #7D0D18; /* Rosso rubino */
+    color: #7D0D18;
+    opacity: 1;
 }
 
-/* Responsive */
+/* Stili per il menu mobile */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
     .mobile-menu {
         display: block;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 100px;
+        left: -100%;
+        width: 80%;
+        height: calc(100vh - 100px);
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+    
+    .nav-links a {
+        font-size: 18px;
     }
     
     .hero h1 {
         font-size: 36px;
     }
     
+    .hero p {
+        font-size: 18px;
+    }
+    
     .about .container {
         grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .about h2:after {
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .footer-bottom {
@@ -346,4 +451,24 @@ h4 {
     .footer-links a {
         margin: 0 10px;
     }
+}
+
+/* Animazioni */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Effetti hover migliorati */
+.service-card, .btn, .btn-outline, .btn-ruby {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Scroll smooth */
+html {
+    scroll-behavior: smooth;
 }
