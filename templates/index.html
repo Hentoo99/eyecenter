@@ -3,53 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eyecenter - Studio Oculistico</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Centro Oculistico - Clone</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <!-- Logo al centro -->
-        <img src="{{ url_for('static', filename='logo.png') }}" alt="Eyecenter Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#servizi">Servizi</a></li>
-                <li><a href="#contatti">Contatti</a></li>
-                <li><a href="#about">Chi siamo</a></li>
-            </ul>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> 0931 314863</span>
+                    <span><i class="fas fa-envelope"></i> marisa.ocu.rubino@gmail.com</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <div class="container">
+                <div class="logo">
+                    <img src="logo-eyecenter.png" alt="Eye Center Rubino">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Il Centro</a></li>
+                    <li><a href="#">Servizi</a></li>
+                    <li><a href="#">Equipe</a></li>
+                    <li><a href="#">Tecnologie</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contatti</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <section id="benvenuto">
-        <h2>La tua vista è la nostra missione</h2>
-        <p>Presso Eyecenter, offriamo cure oculistiche di alta qualità per tutta la famiglia.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Centro Oculistico Specialistico</h1>
+            <p>Eccellenza nella cura degli occhi a Rosolini</p>
+            <a href="#" class="btn">Prenota una visita</a>
+        </div>
     </section>
 
-    <section id="servizi">
-        <h2>I nostri servizi</h2>
-        <ul>
-            <li>Visite oculistiche complete</li>
-            <li>Trattamento per cataratta</li>
-            <li>Correzione laser per miopia, ipermetropia e astigmatismo</li>
-            <li>Controllo del glaucoma</li>
-            <li>Lenti a contatto e occhiali su misura</li>
-        </ul>
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>I Nostri Servizi</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Visita Oculistica</h3>
+                    <p>Visita completa con esami diagnostici avanzati</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-glasses"></i>
+                    <h3>Chirurgia Refrattiva</h3>
+                    <p>Interventi laser per correggere miopia, astigmatismo e ipermetropia</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Diagnostica Avanzata</h3>
+                    <p>Tecnologie all'avanguardia per diagnosi precise</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="about">
-        <h2>Chi siamo</h2>
-        <p>Eyecenter è uno studio oculistico all'avanguardia, con un team di specialisti dedicati alla salute dei vostri occhi.</p>
+    <!-- Aggiungi questa sezione prima del footer -->
+
+    <section class="appointment-section">
+
+        <div class="container">
+
+            <div class="appointment-content">
+
+                <h2>Prenota la tua visita</h2>
+
+                <p>Prenota un consulto con i nostri specialisti per una valutazione completa della tua salute oculare</p>
+
+                <a href="contatti.html" class="btn-ruby">Prenota ora</a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Il nostro centro</h2>
+                <p>Eye Center Rubino è un centro oculistico specialistico che offre servizi di diagnosi, terapia e chirurgia oftalmica con tecnologie all'avanguardia e un team di specialisti altamente qualificati.</p>
+                <a href="#" class="btn-outline">Scopri di più</a>
+            </div>
+            <div class="about-image">
+                <img src="clinica-interno.jpg" alt="Interno della clinica">
+            </div>
+        </div>
     </section>
 
-    <section id="contatti">
-        <h2>Contatti</h2>
-        <p>Indirizzo: Via Milano 45, 20100 Milano</p>
-        <p>Telefono: 02 1234567</p>
-        <p>Email: info@eyecenter.it</p>
-        <p>Orari: Lun-Ven 9:00 - 18:00</p>
-    </section>
 
-    <footer>
-        <p>&copy; 2023 Eyecenter. Tutti i diritti riservati.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Eye Center Rubino</h4>
+                    <p>Via dei Mille, 35<br>21100 Rubino (VA)<br>Italia</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Contatti</h4>
+                    <p><i class="fas fa-phone"></i> 0332 287833</p>
+                    <p><i class="fas fa-envelope"></i> info@eyecenterRubino.it</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Orari</h4>
+                    <p>Lunedì-Venerdì: 9:00-19:00<br>Sabato: 9:00-13:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Eye Center Rubino. Tutti i diritti riservati.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
