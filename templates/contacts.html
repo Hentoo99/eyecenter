@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti - Centro Oculistico Rubino</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> 0931 314863</span>
+                    <span><i class="fas fa-envelope"></i> marisa.ocu.rubino@gmail.com</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <div class="container">
+                <div class="logo">
+                    <img src="logo-eyecenter.png" alt="Eye Center Rubino">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/studio">Lo Studio</a></li>
+                    <li><a href="/contatti" class="active">Contatti</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('contatti-hero.jpg');">
+        <div class="hero-content">
+            <h1>Contatti</h1>
+            <p>Come raggiungerci e come prenotare una visita</p>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="services">
+        <div class="container">
+            <h2>Informazioni e Prenotazioni</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Dove siamo</h3>
+                    <p>Via dei Mille, 35<br>21100 Rubino (VA)<br>Italia</p>
+                    <a href="https://maps.google.com" target="_blank" class="btn-outline" style="margin-top: 15px;">Vedi su Mappa</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telefono</h3>
+                    <p><strong>Prenotazioni:</strong> 0931 314863<br><strong>Emergenze:</strong> 333 1234567</p>
+                    <p>Lunedì-Venerdì: 9:00-19:00<br>Sabato: 9:00-13:00</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p><strong>Informazioni:</strong> info@eyecenterRubino.it<br><strong>Prenotazioni:</strong> prenotazioni@eyecenterRubino.it</p>
+                    <a href="mailto:info@eyecenterRubino.it" class="btn-outline" style="margin-top: 15px;">Scrivici</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map and Form Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-image">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.9729263697204!2d14.94879557584881!3d36.81916867224183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13118990cd0c0a53%3A0x6decae103d912be2!2sEyecenter%20Rubino!5e0!3m2!1sit!2sit!4v1743366280118!5m2!1sit!2sit"
+                        width="100%" 
+                        height="450" 
+                        style="border:0; border-radius: 10px;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                </iframe>
+            </div>
+            <div class="about-content">
+                <h2>Prenota una visita</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nome e Cognome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Motivo della visita</option>
+                            <option>Visita oculistica completa</option>
+                            <option>Controllo glaucoma</option>
+                            <option>Chirurgia refrattiva</option>
+                            <option>Altro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Messaggio" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Invia richiesta</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Section -->
+    <section class="appointment-section" style="background-color: #d9534f;">
+        <div class="container">
+            <div class="appointment-content">
+                <h2>Emergenze oculistiche</h2>
+                <p>Per emergenze oculistiche al di fuori dell'orario di apertura, chiama il numero dedicato:</p>
+                <div style="font-size: 28px; margin: 20px 0;">
+                    <i class="fas fa-phone"></i> 333 1234567
+                </div>
+                <p>Disponibili 24 ore su 24 per urgenze</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Eye Center Rubino</h4>
+                    <p>Via dei Mille, 35<br>21100 Rubino (VA)<br>Italia</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Contatti</h4>
+                    <p><i class="fas fa-phone"></i> 0332 287833</p>
+                    <p><i class="fas fa-envelope"></i> info@eyecenterRubino.it</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Orari</h4>
+                    <p>Lunedì-Venerdì: 9:00-19:00<br>Sabato: 9:00-13:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Eye Center Rubino. Tutti i diritti riservati.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        /* Form Styles */
+        .contact-form {
+            margin-top: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        @media (max-width: 768px) {
+            .about .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                order: 2;
+                margin-top: 30px;
+            }
+            
+            .about-content {
+                order: 1;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                
+                const icon = this.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            const navItems = document.querySelectorAll('.nav-links a');
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                    mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                });
+            });
+
+            // Form submission
+            const contactForm = document.querySelector('.contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Grazie per la tua richiesta. Ti contatteremo al più presto!');
+                    this.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
