@@ -13,8 +13,8 @@
         <div class="top-bar">
             <div class="container">
                 <div class="contact-info">
-                    <span><i class="fas fa-phone"></i> 0931 314863</span>
-                    <span><i class="fas fa-envelope"></i> marisa.ocu.rubino@gmail.com</span>
+                    <span><i class="fas fa-phone"></i> {{numero}}</span>
+                    <span><i class="fas fa-envelope"></i> {{email}}</span>
                 </div>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -62,7 +62,7 @@
                 <div class="service-card">
                     <i class="fas fa-phone"></i>
                     <h3>Telefono</h3>
-                    <p><strong>Prenotazioni:</strong> 0931 314863<br><strong>Emergenze:</strong> 333 1234567</p>
+                    <p><strong>Prenotazioni:</strong> {{numero}}<br><strong>Emergenze:</strong> 333 1234567</p>
                     <p>Lunedì-Venerdì: 9:00-19:00<br>Sabato: 9:00-13:00</p>
                 </div>
                 <div class="service-card">
@@ -89,27 +89,27 @@
             </div>
             <div class="about-content">
                 <h2>Prenota una visita</h2>
-                <form class="contact-form">
+                <form method="POST" action="/contatti" class="contact-form" >
                     <div class="form-group">
-                        <input type="text" placeholder="Nome e Cognome" required>
+                        <input type="text" name="name" placeholder="Nome e Cognome" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Email" required>
+                        <input type="email" name="email" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" placeholder="Telefono" required>
+                        <input type="tel" name="phone" placeholder="Telefono" required>
                     </div>
                     <div class="form-group">
-                        <select required>
+                        <select name="reason" required>
                             <option value="" disabled selected>Motivo della visita</option>
-                            <option>Visita oculistica completa</option>
-                            <option>Controllo glaucoma</option>
-                            <option>Chirurgia refrattiva</option>
-                            <option>Altro</option>
+                            <option value="Visita oculistica completa">Visita oculistica completa</option>
+                            <option value="Controllo glaucoma">Controllo glaucoma</option>
+                            <option value="Chirurgia refrattiva">Chirurgia refrattiva</option>
+                            <option value="Altro">Altro</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Messaggio" rows="4"></textarea>
+                        <textarea name="message" placeholder="Messaggio" rows="4"></textarea>
                     </div>
                     <button type="submit" class="btn">Invia richiesta</button>
                 </form>
@@ -227,15 +227,7 @@
                 });
             });
 
-            // Form submission
-            const contactForm = document.querySelector('.contact-form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    alert('Grazie per la tua richiesta. Ti contatteremo al più presto!');
-                    this.reset();
-                });
-            }
+    
         });
     </script>
 </body>
