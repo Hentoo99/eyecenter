@@ -47,7 +47,7 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/studio">Lo Studio</a></li>
+                    <li><a href="/studio">Il Centro</a></li>
                     <li><a href="/contatti" class="active">Contatti</a></li>
                 </ul>
                 <div class="mobile-menu">
@@ -73,20 +73,22 @@
                 <div class="service-card">
                     <i class="fas fa-map-marker-alt"></i>
                     <h3>Dove siamo</h3>
-                    <p>Via dei Mille, 35<br>21100 Rubino (VA)<br>Italia</p>
+                    <p>Via Sipione, 14<br>96019 Rosolini (SR)</p>
+                    <br>
                     <a href="https://www.google.com/maps?ll=36.819169,14.951371&z=16&t=m&hl=it&gl=IT&mapclient=embed&cid=7920897229413493730" target="_blank" class="btn-outline" style="margin-top: 15px;">Vedi su Mappa</a>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-phone"></i>
                     <h3>Telefono</h3>
-                    <p><strong>Prenotazioni:</strong> {{numero}}<br><strong>Emergenze:</strong> 333 1234567</p>
-                    <p>Lunedì-Venerdì: 9:00-19:00<br>Sabato: 9:00-13:00</p>
+                    <p><strong>Prenotazioni:</strong> 0931 314863<br><strong>Cellulare:</strong> 353 2004219</p>
+                    <p>{{orari}}</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
-                    <p><strong>Informazioni:</strong> info@eyecenterRubino.it<br><strong>Prenotazioni:</strong> prenotazioni@eyecenterRubino.it</p>
-                    <a href="mailto:info@eyecenterRubino.it" class="btn-outline" style="margin-top: 15px;">Scrivici</a>
+                    <p><strong>Informazioni:</strong> {{email}}<br>
+                    <br>
+                    <a href="mailto:info@eyecenterRubino.it" class="btn-outline" style="margin-top: 15px;">Invia</a>
                 </div>
             </div>
         </div>
@@ -141,7 +143,7 @@
                 <h2>Emergenze oculistiche</h2>
                 <p>Per emergenze oculistiche al di fuori dell'orario di apertura, chiama il numero dedicato:</p>
                 <div style="font-size: 28px; margin: 20px 0;">
-                    <i class="fas fa-phone"></i> 333 1234567
+                    <i class="fas fa-phone"></i> {{numero}}
                 </div>
                 <p>Disponibili 24 ore su 24 per urgenze</p>
             </div>

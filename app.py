@@ -32,9 +32,13 @@ def home():
 
 @app.route('/studio')
 def thestudio():
+    image_folder = os.path.join(app.static_folder, 'images/center')
+    images = [f for f in os.listdir(image_folder) if f.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
     return render_template('studio.html', 
                          email=os.getenv('EMAIL'), 
-                         numero=os.getenv('NUMBER'))
+                         numero=os.getenv('NUMBER'),
+                         orari = os.getenv('ORARI'),
+                         studio_images=images)
 
 @app.route('/contatti', methods=['GET', 'POST'])
 def contatti():
@@ -79,7 +83,9 @@ def contatti():
 
     return render_template('contacts.html', 
                          email=os.getenv('EMAIL'), 
-                         numero=os.getenv('NUMBER'))
+                         numero=os.getenv('NUMBER'),
+                         orari = os.getenv('ORARI'))
+
 
 if __name__ == '__main__':
     app.run(debug=True)
