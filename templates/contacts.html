@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatti - Centro Oculistico Rubino</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='favicon/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='favicon/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='favicon/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='favicon/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='favicon/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='favicon/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='favicon/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='favicon/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='favicon/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='favicon/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='favicon/manifest.json') }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ url_for('static', filename='favicon/ms-icon-144x144.png') }}">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -26,7 +43,7 @@
         <nav class="main-nav">
             <div class="container">
                 <div class="logo">
-                    <img src="logo-eyecenter.png" alt="Eye Center Rubino">
+                    <a href="/"><img src="{{ url_for('static', filename='logo/logo-eyecenter.PNG') }}" alt="Eye Center Rubino"></a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
@@ -102,9 +119,9 @@
                     <div class="form-group">
                         <select name="reason" required>
                             <option value="" disabled selected>Motivo della visita</option>
-                            <option value="Visita oculistica completa">Visita oculistica completa</option>
-                            <option value="Controllo glaucoma">Controllo glaucoma</option>
-                            <option value="Chirurgia refrattiva">Chirurgia refrattiva</option>
+                            <option value="Visita oculistica completa">Visita oculistica</option>
+                            <option value="Controllo glaucoma">Chirurgia Refrattiva</option>
+                            <option value="Chirurgia refrattiva">Chirurgia della Cataratta</option>
                             <option value="Altro">Altro</option>
                         </select>
                     </div>
@@ -137,16 +154,16 @@
             <div class="footer-columns">
                 <div class="footer-column">
                     <h4>Eye Center Rubino</h4>
-                    <p>Via dei Mille, 35<br>21100 Rubino (VA)<br>Italia</p>
+                    <p>Via Sipione, 14<br>96019 Rosolini (SR)</p>
                 </div>
                 <div class="footer-column">
                     <h4>Contatti</h4>
-                    <p><i class="fas fa-phone"></i> 0332 287833</p>
-                    <p><i class="fas fa-envelope"></i> info@eyecenterRubino.it</p>
+                    <p><i class="fas fa-phone"></i> {{numero}}</p>
+                    <p><i class="fas fa-envelope"></i> {{email}}</p>
                 </div>
                 <div class="footer-column">
                     <h4>Orari</h4>
-                    <p>Lunedì-Venerdì: 9:00-19:00<br>Sabato: 9:00-13:00</p>
+                    <p>{{orari}}</p>
                 </div>
             </div>
             <div class="footer-bottom">

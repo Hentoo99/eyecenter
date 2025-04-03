@@ -27,7 +27,8 @@ def send_telegram_message(message):
 def home():
     return render_template('index.html', 
                          email=os.getenv('EMAIL'), 
-                         numero=os.getenv('NUMBER'))
+                         numero=os.getenv('NUMBER'),
+                         orari = os.getenv('ORARI'))
 
 @app.route('/studio')
 def thestudio():
