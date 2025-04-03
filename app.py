@@ -33,7 +33,8 @@ def home():
 @app.route('/studio')
 def thestudio():
     image_folder = os.path.join(app.static_folder, 'images/center')
-    images = [f for f in os.listdir(image_folder) if f.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
+    images = [f for f in os.listdir(image_folder) if f.endswith(('.jpg', '.jpeg', '.png', '.gif', '.JPG'))]
+    print(images)
     return render_template('studio.html', 
                          email=os.getenv('EMAIL'), 
                          numero=os.getenv('NUMBER'),
