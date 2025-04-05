@@ -168,7 +168,7 @@ h4 {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/static/images/hero-image.jpeg');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/static/images/hero-image.jpeg');
     background-size: cover;
     background-position: center;
     height: 500px;

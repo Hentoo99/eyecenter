@@ -172,7 +172,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ url_for('static', filename="images/hero-studio.jpeg") }}');">
+    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7)), url('{{ url_for('static', filename="images/hero-studio.jpeg") }}');">
         <div class="hero-content">
             <h1>Il Nostro Centro</h1>
             <p>Ambiente accogliente e tecnologie all'avanguardia</p>
@@ -210,12 +210,18 @@
     <section class="about">
         <div class="container">
             <div class="about-content">
-                <h2>Il nostro ambiente</h2>
-                <p>Lo studio oculistico Rubino è stato progettato per offrire il massimo comfort ai pazienti, con ambienti luminosi e accoglienti. Tutti gli spazi sono organizzati per garantire visite accurate in un'atmosfera rilassante.</p>
-                <p>La nostra strumentazione viene costantemente aggiornata per garantire diagnosi precise e trattamenti all'avanguardia.</p>
+                <h2>Chi sono</h2>
+                <p>
+                    Sono la Dott.ssa Marisa Rubino, laureata in Medicina e Chirurgia presso l’Università degli Studi di Ferrara. Ho conseguito il diploma di specializzazione in Oftalmologia, con Lode, presso l’Università degli Studi di Pisa.<br>
+                    Attualmente ricopro il ruolo di Dirigente Medico presso l’Ospedale Umberto I di Siracusa.<br>
+                    In passato ho prestato servizio presso l’ASST Settelaghi - Ospedale di Circolo e Fondazione Macchi, Università dell’Insubria di Varese, e presso l’ASST Fatebenefratelli Sacco di Milano.<br>
+                    Ho partecipato alla stesura di articoli scientifici pubblicati su riviste specialistiche nazionali e internazionali. Sono membro di diverse società scientifiche oftalmologiche e ho preso parte a numerosi congressi di Oftalmologia, sia a livello nazionale che internazionale.<br>
+                    Ho, inoltre, conseguito il Diploma di Superior Specialist in Ophthalmology presso l’European School for Advanced Studies in Ophthalmology di Lugano.<br>
+                    Mi occupo principalmente di chirurgia della cataratta e di chirurgia laser refrattiva, oltre che della diagnosi e del trattamento del glaucoma e delle patologie retiniche e maculari.
+                    </p>
             </div>
             <div class="about-image">
-                <img src="{{ url_for('static', filename='studio-ambiente.jpg') }}" alt="Ambiente dello studio">
+                <img src="{{ url_for('static', filename='images/imgwho-bw.jpeg') }}" alt="Chi sono">
             </div>
         </div>
     </section>
