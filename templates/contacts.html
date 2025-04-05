@@ -108,7 +108,7 @@
             </div>
             <div class="about-content">
                 <h2>Prenota una visita</h2>
-                <form method="POST" action="/contatti" class="contact-form" >
+                <form method="POST" action="/contatti" class="contact-form">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Nome e Cognome" required>
                     </div>
@@ -129,6 +129,12 @@
                     </div>
                     <div class="form-group">
                         <textarea name="message" placeholder="Messaggio" rows="4"></textarea>
+                    </div>
+                    <div style="display: flex; align-items: center; margin: 10px 0;">
+                        <input type="checkbox" name="privacy" required id="privacyCheckbox" style="margin: 0 10px 0 0;">
+                        <label for="privacyCheckbox" style="margin: 0;">
+                            Ho letto e accetto la <a href="https://www.iubenda.com/privacy-policy/33984770" target="_blank" style="color: #7D0D18;">Privacy Policy</a>.
+                        </label>
                     </div>
                     <button type="submit" class="btn">Invia richiesta</button>
                 </form>
@@ -171,7 +177,7 @@
                 <p>&copy; 2023 Eye Center Rubino. Tutti i diritti riservati.</p>
                 <div class="footer-links">
                     <a href="https://www.iubenda.com/privacy-policy/33984770">Privacy Policy</a>
-                    <a href="https://www.iubenda.com/privacy-policy/33984770/cookie-policy">Cookie Policy</a>
+                    <!--<a href="https://www.iubenda.com/privacy-policy/33984770/cookie-policy">Cookie Policy</a>-->
                 </div>
             </div>
         </div>
