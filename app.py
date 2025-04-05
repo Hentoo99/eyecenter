@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory
 import os
 import telegram
 import asyncio
@@ -22,6 +22,10 @@ def send_telegram_message(message):
         loop.run_until_complete(send_telegram_message_async(message))
     finally:
         loop.close()
+
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory('static', 'sitemap.xml')
 
 @app.route('/')
 def home():
