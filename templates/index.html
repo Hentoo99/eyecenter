@@ -117,11 +117,22 @@
                 <a href="/studio" class="btn-outline">Scopri di più</a>
             </div>
             <div class="about-image">
-                <img src="{{ url_for('static', filename='images/img2.jpeg') }}" alt="Interno della clinica">
+                <img src="{{ url_for('static', filename='images/img2.jpeg') }}" alt="Interno del centro">
             </div>
         </div>
     </section>
 
+
+    <section class="video">
+        <div class="container">
+            
+            <div class="video-src">
+                <video loop width="920" controls>
+                    <source src="{{ url_for('static', filename='images/video2.mp4') }}" type="video/mp4"> 
+                </video>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
